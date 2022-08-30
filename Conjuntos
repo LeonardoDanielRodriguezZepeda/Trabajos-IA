@@ -1,0 +1,61 @@
+ConjuntoNumerosReales=set([0,1,2,3,4,5,6,7,8,9,10])
+ConjuntoVacio= set()
+ConjuntoPractica = set()
+b=0
+
+def Funcion_Operacion(a=None,A=None):
+
+  if a=="1":
+     ConjuntoC = ConjuntoNumerosReales|ConjuntoPractica
+     ConjuntoD = ConjuntoVacio | ConjuntoPractica
+     for n in ConjuntoC:
+         str(n)
+         print("La union de los numeros reales y tu conjunto es igual a:",n)
+     for n in ConjuntoD:
+         str(n)
+         print("La union del conjunto vacio y tu conjunto  es igual a:",n)
+
+  if a=="2":
+        ConjuntoC = ConjuntoNumerosReales & ConjuntoPractica
+        ConjuntoD = ConjuntoVacio & ConjuntoPractica
+        for n in ConjuntoC:
+         str(n)
+         print("La interseccion de los numeros reales y tu conjunto es igual a:",n)
+        for n in ConjuntoD:
+         str(n)
+         print("La interseccion del conjunto vacio y tu conjunto  es igual a:",n)    
+  if a=="3":
+       ConjuntoC = ConjuntoNumerosReales-ConjuntoPractica
+       ConjuntoD = ConjuntoVacio - ConjuntoPractica
+       for n in ConjuntoC:
+         str(n)
+         print("La diferencia de los numeros reales y tu conjunto es igual a:",n)
+       for n in ConjuntoD:
+         str(n)
+         print("La diferencia del conjunto vacio y tu conjunto  es igual a:",n)
+  if a=="4":
+      ConjuntoC = ConjuntoNumerosReales^ConjuntoPractica
+      ConjuntoD = ConjuntoVacio ^ ConjuntoPractica
+      for n in ConjuntoC:
+         str(n)
+         print("La diferencia simetrica de los numeros reales y tu conjunto es igual a:",n)
+      for n in ConjuntoD:
+         str(n)
+         print("La diferencia simetrica del conjunto vacio y tu conjunto  es igual a:",n)
+  if a=="5":
+      b=10
+      return b
+def inicio_calculos():  
+    while b<6:
+        print("Selecciona una operación:\n1-Unión\n2-Intersección\n3-Diferencia\n4-Diferencia simétrica\n5-salir")
+        seleccion = input()
+        valores =input("De que tamaño quieres tu conjunto A")
+        x=range(int(valores))
+        for n in  x:
+            c  =   input("Dame el valor del temino del conjunto A en la posición:")
+            ConjuntoPractica.add(c)    
+        Funcion_Operacion(seleccion,ConjuntoPractica)
+
+
+if _name_ == '_main_':
+      inicio_calculos()
